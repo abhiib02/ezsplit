@@ -16,7 +16,7 @@ function splitString(str,className){
 function splittingInit(){
   let splitCharArr = document.querySelectorAll('.split-text');
   splitCharArr.forEach((str)=>{
-  splitString(str,'span-char');
+  splitString(str,str.dataset.charclass);
 })
 }
 
