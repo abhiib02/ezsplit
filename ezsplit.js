@@ -4,7 +4,7 @@ function splitString(str,className){
   let i;
   for(i=0;i<string.length;i++){
     splittedTextHtml += `
-    <span class="${className} ${className-i}" char="${(string[i] != ' ') ? string[i] : '&nbsp;'}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
+    <span class="${className} ${className}-${i}" char="${(string[i] != ' ') ? string[i] : '&nbsp;'}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
     ${(string[i] != ' ') ? string[i] : '&nbsp;'}
     </span>`;
   }
