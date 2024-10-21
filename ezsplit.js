@@ -1,10 +1,10 @@
-function splitString(str){
+function splitString(str,className){
   let splittedTextHtml='',generatedHTML='';
   let string = str.textContent;
   let i;
   for(i=0;i<string.length;i++){
     splittedTextHtml += `
-    <span char="${(string[i] != ' ') ? string[i] : '&nbsp;'}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
+    <span class="${className} ${className-i}" char="${(string[i] != ' ') ? string[i] : '&nbsp;'}" style="--totalChars:${string.length};--index:${i};--delay:${i*100}ms;--duration:${string.length*100}ms">
     ${(string[i] != ' ') ? string[i] : '&nbsp;'}
     </span>`;
   }
@@ -16,7 +16,7 @@ function splitString(str){
 function splittingInit(){
   let splitCharArr = document.querySelectorAll('.split-text');
   splitCharArr.forEach((str)=>{
-  splitString(str);
+  splitString(str,'span-char');
 })
 }
 
